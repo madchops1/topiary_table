@@ -1,0 +1,126 @@
+body {
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+body a {
+  outline: none;
+}
+body .table-head-toggler {
+  background: #767b4b;
+  color: #fff;
+  padding: 12px 36px;
+  border-bottom: 2px solid #54573f;
+}
+body .table-head-toggler h4 {
+  margin: 0 0 0 12px !important;
+  text-transform: uppercase;
+  font-size: 14px;
+  display: block;
+  float: left;
+}
+body .table-head-toggler button {
+  border-radius: 6px;
+  width: 18px;
+  height: 18px;
+  display: block;
+  float: left;
+  background: #fffffe;
+  border: none;
+  padding: 0px !important;
+  position: relative;
+}
+body .table-head-toggler button span {
+  color: #767b4b;
+  line-height: 18px;
+  font-size: 9px;
+  padding: 0px !important;
+  margin: 0px !important;
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  display: block;
+}
+body table {
+  margin-bottom: 0px !important;
+  border-collapse: separate !important;
+}
+body table.table-striped > tbody > tr:nth-of-type(odd) {
+  background-color: #e4e4e3;
+}
+body table.table-hover tbody tr:hover td, body table .table-hover tbody tr:hover th {
+  background-color: #bdc19a;
+}
+body table tr.last td {
+  border-bottom: 1px solid #969796;
+}
+body table th {
+  font-size: 10px;
+  background-color: #969796;
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 1px;
+  border-right: 1px solid #fff;
+}
+body table th.action {
+  background: #c6c7c5;
+  color: #767b4b;
+  border-right: 1px solid #969796;
+}
+body table td {
+  font-size: 11px;
+  text-align: center;
+  border-right: 1px solid #969796;
+}
+body table td.first {
+  border-left: 1px solid #969796;
+}
+body table td a {
+  color: #3c6b7d;
+  text-decoration: underline;
+}
+body table td a:hover, body table td a:active {
+  text-decoration: none;
+}
+
+.nopad {
+  padding-right: 0px;
+  padding-left: 0px;
+}
+
+.center {
+  text-align: center;
+}
+
+.right {
+  text-align: right;
+}
+
+.left {
+  text-align: left;
+}
+
+.poscenter {
+  margin: 0px auto;
+  float: none;
+}
+
+.block {
+  display: block !important;
+}
+
+.clearfix {
+  clear: both;
+}
+
+.float-left {
+  float: left;
+}
+
+.float-right {
+  float: right;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}

@@ -1,0 +1,304 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
+body .table-head-toggler {
+  background: #767b4b;
+  color: #fff;
+  padding: 12px 36px;
+  border-bottom: 2px solid #54573f;
+}
+body .table-head-toggler h4 {
+  margin: 0 0 0 12px !important;
+  text-transform: uppercase;
+  font-size: 14px;
+  display: block;
+  float: left;
+  color: #fff;
+}
+body .table-head-toggler button {
+  border-radius: 6px;
+  width: 18px;
+  height: 18px;
+  display: block;
+  float: left;
+  background: #fffffe;
+  border: none;
+  padding: 0px !important;
+  position: relative;
+}
+body .table-head-toggler button span {
+  color: #767b4b;
+  line-height: 18px;
+  font-size: 9px;
+  padding: 0px !important;
+  margin: 0px !important;
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  display: block;
+}
+body table {
+  width: 100%;
+  margin-bottom: 0px !important;
+  border-collapse: separate !important;
+}
+body table.table-striped > tbody > tr:nth-of-type(odd) {
+  background-color: #e4e4e3;
+}
+body table.table-hover tbody tr:hover td, body table .table-hover tbody tr:hover th {
+  background-color: #bdc19a;
+}
+body table tr.last td {
+  border-bottom: 1px solid #969796;
+}
+body table th {
+  font-size: 10px;
+  background-color: #969796;
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: 1px;
+  border-right: 1px solid #fff;
+}
+body table th.action {
+  background: #c6c7c5;
+  color: #767b4b;
+  border-right: 1px solid #969796;
+}
+body table td {
+  font-size: 11px;
+  text-align: center;
+  border-right: 1px solid #969796;
+}
+body table td.first {
+  border-left: 1px solid #969796;
+}
+body table td a {
+  color: #3c6b7d;
+  text-decoration: underline;
+}
+body table td a:hover, body table td a:active {
+  text-decoration: none;
+}
+
+.nopad {
+  padding-right: 0px;
+  padding-left: 0px;
+}
+
+.center {
+  text-align: center;
+}
+
+.right {
+  text-align: right;
+}
+
+.left {
+  text-align: left;
+}
+
+.poscenter {
+  margin: 0px auto;
+  float: none;
+}
+
+.block {
+  display: block !important;
+}
+
+.clearfix {
+  clear: both;
+}
+
+.float-left {
+  float: left;
+}
+
+.float-right {
+  float: right;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+header.mainnav .logo {
+  float: left;
+}
+header.mainnav .secondary-nav {
+  float: right;
+}
+header.mainnav .secondary-nav .welcome {
+  font-weight: bold;
+  margin-right: 12px;
+}
+header.mainnav .cssmenu {
+  background-color: #767b4b;
+  margin-bottom: 24px;
+  border-radius: 6px;
+  border-top: 1px solid #bdc19a;
+  border-bottom: 1px solid #54573f;
+  padding: 12px 24px;
+  margin-top: 24px;
+  /*
+    .nav li a:first-child:nth-last-child(2):before {
+     content:"";
+     position: absolute;
+     height:0;
+     width: 0;
+     border: 5px solid transparent;
+     top: 50% ;
+     right:5px;
+   }
+  */
+  /* submenu positioning*/
+  /* arrow hover styling */
+}
+header.mainnav .cssmenu nav {
+  display: block;
+  text-align: center;
+}
+header.mainnav .cssmenu nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+header.mainnav .cssmenu .nav a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  padding: 3px 6px;
+  text-transform: uppercase;
+  font-size: 11px;
+  position: relative;
+}
+header.mainnav .cssmenu .nav {
+  vertical-align: top;
+  display: inline-block;
+  border-radius: 6px;
+}
+header.mainnav .cssmenu .nav li {
+  position: relative;
+}
+header.mainnav .cssmenu .nav > li {
+  float: left;
+  margin-right: 1px;
+  list-style: none !important;
+}
+header.mainnav .cssmenu .nav > li > a {
+  margin-bottom: 1px;
+}
+header.mainnav .cssmenu .nav > li:last-child {
+  border-radius: 0 0 4px 0;
+  margin-right: 0;
+}
+header.mainnav .cssmenu .nav > li:last-child > a {
+  border-radius: 0 4px 0 0;
+}
+header.mainnav .cssmenu .nav li li a {
+  margin-top: 1px;
+}
+header.mainnav .cssmenu .nav > ul > li {
+  list-style: none;
+}
+header.mainnav .cssmenu .nav > li > a:hover, header.mainnav .cssmenu .nav > li > a:focus {
+  background-color: transparent !important;
+  color: #fff;
+}
+header.mainnav .cssmenu .nav ul {
+  position: absolute;
+  white-space: nowrap;
+  z-index: 1;
+  left: -99999em;
+  list-style: none;
+}
+header.mainnav .cssmenu .nav > li:hover > ul {
+  left: auto;
+  min-width: 100%;
+  background-color: #c6c7c5;
+  margin-left: 0px;
+  padding-left: 0px;
+  border-bottom: 1px solid #54573f;
+}
+header.mainnav .cssmenu .nav > li:hover > ul > li {
+  margin: 0px;
+  padding: 0px;
+  border-left: 1px solid #767b4b;
+  border-right: 1px solid #767b4b;
+}
+header.mainnav .cssmenu .nav > li:hover > ul > li.subnav:hover {
+  border-right: 1px solid transparent;
+}
+header.mainnav .cssmenu .nav > li:hover > ul > li > a {
+  color: #767b4b;
+  margin: 0px;
+  padding: 12px 12px;
+  border-top: 1px solid #969796;
+}
+header.mainnav .cssmenu .nav > li:hover > ul > li > a.first {
+  border-top: 0px !important;
+}
+header.mainnav .cssmenu .nav > li:hover > ul > li > a:hover {
+  color: #54573f;
+}
+header.mainnav .cssmenu .nav > li li ul {
+  margin: 0px;
+  padding: 0px;
+  border-bottom: 1px solid #54573f;
+  border-top: 1px solid #54573f;
+  border-right: 1px solid #54573f;
+  border-left: 1px solid #54573f;
+}
+header.mainnav .cssmenu .nav > li li ul > li {
+  margin: 0px;
+  padding: 0px;
+}
+header.mainnav .cssmenu .nav > li li ul > li a {
+  margin: 0px;
+  padding: 12px 12px;
+  border-top: 1px solid #969796;
+  color: #767b4b;
+}
+header.mainnav .cssmenu .nav > li li ul > li a.first {
+  border-top: 0px;
+}
+header.mainnav .cssmenu .nav > li li ul > li a:hover {
+  color: #54573f;
+}
+header.mainnav .cssmenu .nav > li li:hover > ul {
+  /* margin-left: 1px */
+  left: 100%;
+  top: 0px;
+  background-color: #c6c7c5;
+}
+header.mainnav .cssmenu .nav > li > a:first-child:nth-last-child(2):before {
+  border-top-color: #aaa;
+}
+header.mainnav .cssmenu .nav > li:hover > a:first-child:nth-last-child(2):before {
+  border: 5px solid transparent;
+  margin-top: -5px;
+}
+header.mainnav .cssmenu .nav li li > a:first-child:nth-last-child(2):before {
+  border-left-color: #aaa;
+  margin-top: -5px;
+}
+header.mainnav .cssmenu .nav li li:hover > a:first-child:nth-last-child(2):before {
+  border: 5px solid transparent;
+  right: 10px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #767b4b;
+  font-family: 'Lato', sans-serif;
+}
+
+body {
+  padding-top: 24px;
+  padding-bottom: 24px;
+  font-family: 'Lato', sans-serif;
+}
+body a {
+  outline: none;
+}
+body .row {
+  margin-bottom: 24px;
+}
