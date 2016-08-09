@@ -93,11 +93,17 @@ module.exports = function(grunt) {
           //{expand: true, src: ['./css/header.css'], dest: 'dist/', filter: 'isFile'},
           {expand: true, src: ['./css/layout.css'], dest: 'dist/', filter: 'isFile'},
           {expand: true, src: ['./css/bootstrap.css'], dest: 'dist/', filter: 'isFile'},
+          {expand: true, src: ['./bower_components/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css'], dest: 'dist/', filter: 'isFile'},
+          {expand: true, src: ['./css/bootstrap-select.min.css'], dest: 'dist/', filter: 'isFile'},
 
           // scripts
           {expand: true, src: ['./js/scripts.js'], dest: 'dist/', filter: 'isFile'},
-          {expand: true, flatten: true, src: ['./bower_components/jquery/dist/jquery.min.js'], dest: 'dist/bower_components/jquery/dist/', filter: 'isFile'},
-          {expand: true, flatten: true, src: ['./bower_components/bootstrap-sass/assets/javascripts/bootstrap.min.js'], dest: 'dist/bower_components/bootstrap-sass/assets/javascripts/', filter: 'isFile'},
+          //{expand: true, flatten: true, src: ['./bower_components/jquery/dist/jquery.min.js'], dest: 'dist/bower_components/jquery/dist/', filter: 'isFile'}, // newer jquery
+          {expand: true, flatten: true, src: ['./bower_components/jquery-1.9.1.min/index.js'], dest: 'dist/bower_components/jquery-1.9.1.min/', filter: 'isFile'}, // but we need older jquery for datetimepicker
+          {expand: true, flatten: true, src: ['./bower_components/bootstrap-sass/assets/javascripts/bootstrap.min.js'], dest: 'dist/bower_components/bootstrap-sass/assets/javascripts/', filter: 'isFile'}, // bootstrap js
+          {expand: true, flatten: true, src: ['./bower_components/moment/min/moment.min.js'], dest: 'dist/bower_components/moment/min/', filter: 'isFile'}, // moment
+          {expand: true, flatten: true, src: ['./bower_components/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js'], dest: 'dist/bower_components/eonasdan-bootstrap-datetimepicker/build/js/', filter: 'isFile'}, // datetimepicker
+          {expand: true, flatten: true, src: ['./js/_vendor/bootstrap-select.min.js'], dest: 'dist/js/_vendor/', filter: 'isFile'}, // bootstrap select
 
           // bootstrap icons
           //glyphicons-halflings-regular.woff Failed to load resource: net::ERR_FILE_NOT_FOUND
