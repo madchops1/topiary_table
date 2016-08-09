@@ -35,21 +35,21 @@ body .table-head-toggler button span {
   position: absolute;
   display: block;
 }
-body table {
+body table.greentable {
   width: 100%;
   margin-bottom: 0px !important;
   border-collapse: separate !important;
 }
-body table.table-striped > tbody > tr:nth-of-type(odd) {
+body table.greentable.table-striped > tbody > tr:nth-of-type(odd) {
   background-color: #e4e4e3;
 }
-body table.table-hover tbody tr:hover td, body table .table-hover tbody tr:hover th {
+body table.greentable.table-hover tbody tr:hover td, body table.greentable .table-hover tbody tr:hover th {
   background-color: #bdc19a;
 }
-body table tr.last td {
+body table.greentable tr.last td {
   border-bottom: 1px solid #969796;
 }
-body table th {
+body table.greentable th {
   font-size: 10px;
   background-color: #969796;
   color: #fff;
@@ -58,25 +58,47 @@ body table th {
   letter-spacing: 1px;
   border-right: 1px solid #fff;
 }
-body table th.action {
+body table.greentable th.action {
   background: #c6c7c5;
   color: #767b4b;
   border-right: 1px solid #969796;
 }
-body table td {
+body table.greentable td {
   font-size: 11px;
   text-align: center;
   border-right: 1px solid #969796;
 }
-body table td.first {
+body table.greentable td.first {
   border-left: 1px solid #969796;
 }
-body table td a {
+body table.greentable td a {
   color: #3c6b7d;
   text-decoration: underline;
 }
-body table td a:hover, body table td a:active {
+body table.greentable td a:hover, body table.greentable td a:active {
   text-decoration: none;
+}
+body table.white-table {
+  width: 100%;
+  border-collapse: separate !important;
+  margin-bottom: 24px !important;
+}
+body table.white-table th {
+  border-right: 1px solid #969796;
+  border-bottom: 1px solid #969796;
+  border-top: 1px solid #969796;
+  padding: 12px 8px;
+}
+body table.white-table th.first {
+  border-left: 1px solid #969796;
+}
+body table.white-table td {
+  border-right: 1px solid #969796;
+  border-bottom: 1px solid #969796;
+  padding: 6px 20px;
+}
+body table.white-table td.first {
+  border-left: 1px solid #969796;
 }
 
 .nopad {
@@ -119,6 +141,62 @@ body table td a:hover, body table td a:active {
 
 .uppercase {
   text-transform: uppercase;
+}
+
+.form-title h1 {
+  font-style: 18px;
+}
+.form-title h2 {
+  color: #000;
+  font-size: 12px;
+  font-family: 'Lato', sans-serif;
+}
+
+.form-title-small h3 {
+  font-size: 14px;
+  color: #827d00;
+  font-family: 'Lato', sans-serif;
+}
+.form-title-small h3.bordered {
+  border-bottom: 1px solid #969796;
+  padding-bottom: 8px;
+}
+.form-title-small h4 {
+  color: #000;
+  font-size: 12px;
+  font-family: 'Lato', sans-serif;
+}
+
+.large-label {
+  color: #827d00;
+  font-size: 16px;
+}
+
+.form-horizontal .control-label {
+  text-align: left !important;
+}
+
+label span {
+  color: #e51b24;
+  font-size: 10px;
+}
+
+button.submit {
+  background-color: #827d00;
+  font-size: 14px;
+  color: #ffffff;
+  padding: 8px 12px;
+  text-transform: uppercase;
+  border: 0px !important;
+}
+
+.form-group textarea {
+  border: 1px solid #c6c7c5;
+  width: 100%;
+}
+
+.bootstrap-select {
+  width: 100% !important;
 }
 
 header.mainnav .logo {
@@ -287,7 +365,7 @@ header.mainnav .cssmenu .nav li li:hover > a:first-child:nth-last-child(2):befor
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color: #767b4b;
+  color: #827d00;
   font-family: 'Lato', sans-serif;
 }
 

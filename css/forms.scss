@@ -1,0 +1,72 @@
+.form-title {
+  h1 {
+    font-style: 18px;
+
+  }
+
+  h2 {
+    color: #000;
+    font-size: 12px;
+    font-family: 'Lato', sans-serif;
+  }
+}
+
+.form-title-small {
+  h3 {
+    font-size: 14px;
+    color: $brightgreen;
+    font-family: 'Lato', sans-serif;
+
+    &.bordered {
+      border-bottom: 1px solid $darkgray;
+      padding-bottom: 8px;
+    }
+  }
+
+  h4 {
+    color: #000;
+    font-size: 12px;
+    font-family: 'Lato', sans-serif;
+  }
+}
+
+.large-label {
+  color: $brightgreen;
+  font-size: 16px;
+}
+
+.form-horizontal {
+
+  .control-label {
+    text-align: left !important;
+  }
+}
+
+label {
+  span {
+    color: $red;
+    font-size: 10px;
+  }
+}
+
+button.submit {
+  background-color: $brightgreen;
+  font-size: 14px;
+  color: #ffffff;
+  padding: 8px 12px;
+  text-transform: uppercase;
+  border: 0px !important;
+}
+
+.form-group {
+  textarea {
+    border: 1px solid $lightgray;
+    width: 100%;
+  }
+}
+
+.bootstrap-select {
+  //button {
+    width: 100% !important;
+  //}
+}

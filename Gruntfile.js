@@ -12,6 +12,7 @@ module.exports = function(grunt) {
       css: ['<%= project.app %>/css/tables.scss'],
       hcss: ['<%= project.app %>/css/header.scss'],
       lcss: ['<%= project.app %>/css/layout.scss'],
+      fcss: ['<%= project.app %>/css/layout.scss'],
       bootstrap: ['<%= project.app %>/css/bootstrap.scss']//,
       //mixins: ['<%= project.app %>/css/mixins.scss']
     },

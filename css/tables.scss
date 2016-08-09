@@ -45,7 +45,7 @@ body {
     }
   }
 
-  table {
+  table.greentable {
     width: 100%;
     //border: 1px solid $lightgray3;
     margin-bottom: 0px !important;
@@ -109,7 +109,39 @@ body {
       }
     }
   }
+
+  table.white-table {
+    width: 100%;
+    border-collapse: separate !important;
+    margin-bottom: 24px !important;
+
+    th {
+      border-right: 1px solid $darkgray;
+      border-bottom: 1px solid $darkgray;
+      border-top: 1px solid $darkgray;
+
+      padding: 12px 8px;
+
+      &.first {
+        border-left: 1px solid $darkgray;
+
+      }
+    }
+
+    td {
+      border-right: 1px solid $darkgray;
+      border-bottom: 1px solid $darkgray;
+      padding: 6px 20px;
+
+      &.first {
+        border-left: 1px solid $darkgray;
+
+      }
+    }
+  }
 }
+
+
 
 // Architecture
 .nopad { padding-right: 0px; padding-left:0px; }

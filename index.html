@@ -3,11 +3,14 @@
   <head>
     <title>Topiary Html5 Tables</title>
     <meta name="description" content="">
+
+    <!-- Responsive and Facebook Meta Tags
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="">
     <meta property="og:title" content="">
     <meta property="og:description" content="">
     <meta property="og:image" content="">
+    -->
 
     <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
 
@@ -21,9 +24,23 @@
     <!-- Main CSS -->
     <link rel="stylesheet" type="text/css" href="css/layout.css">
 
+    <!-- Datetimepicker CSS -->
+    <link rel="stylesheet" href="bower_components/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css">
+
+    <!-- Select CSS -->
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.10.0/css/bootstrap-select.min.css">
+
+
     <!-- VENDOR JS -->
-    <script src="bower_components/jquery/dist/jquery.min.js"></script>
-    <script src="bower_components/bootstrap-sass/assets/javascripts/bootstrap.min.js"></script>
+    <!-- <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script> -->
+    <script type="text/javascript" src="bower_components/jquery-1.9.1.min/index.js"></script>
+    <script type="text/javascript" src="bower_components/bootstrap-sass/assets/javascripts/bootstrap.min.js"></script>
+    <script type="text/javascript" src="bower_components/moment/min/moment.min.js"></script>
+    <script type="text/javascript" src="bower_components/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.10.0/js/bootstrap-select.min.js"></script>
+
+
+    <!-- App JS -->
     <script src="js/scripts.js"></script>
   </head>
   <body>
@@ -139,7 +156,7 @@
           </div>
 
           <!-- table itself -->
-          <table id="incident_table_1" class="table table-striped table-hover in">
+          <table id="incident_table_1" class="table table-striped table-hover in greentable">
             <thead>
               <tr>
                 <th>Incident Number</th>
@@ -165,7 +182,7 @@
                 <td>Bobby Looey</td>
                 <td>No</td>
                 <td>No</td>
-                <td class="last"><a href="#">Make Claim Archive</a></td>
+                <td class="last"><a href="#">Make Claim</a> <a href="#">Archive</a></td>
               </tr>
               <tr>
                 <td class="first"><a href="#">55C244</a></td>
@@ -177,7 +194,7 @@
                 <td>Bobby Looey</td>
                 <td>No</td>
                 <td>No</td>
-                <td class="last"><a href="#">Make Claim Archive</a></td>
+                <td class="last"><a href="#">Make Claim</a> <a href="#">Archive</a></td>
               </tr>
               <tr class="last">
                 <td class="first"><a href="#">55C244</a></td>
@@ -189,7 +206,7 @@
                 <td>Bobby Looey</td>
                 <td>No</td>
                 <td>No</td>
-                <td class="last"><a href="#">Make Claim Archive</a></td>
+                <td class="last"><a href="#">Make Claim</a> <a href="#">Archive</a></td>
               </tr>
             </tbody>
           </table>
@@ -204,7 +221,7 @@
           </div>
 
           <!-- table itself -->
-          <table id="incident_table_2" class="table table-striped table-hover collapse out">
+          <table id="incident_table_2" class="table table-striped table-hover collapse out greentable">
             <thead>
               <tr>
                 <th>Incident Number</th>
@@ -230,7 +247,7 @@
                 <td>Bobby Looey</td>
                 <td>No</td>
                 <td>No</td>
-                <td class="last"><a href="#">Make Claim Archive</a></td>
+                <td class="last"><a href="#">Make Claim</a> <a href="#">Archive</a></td>
               </tr>
               <tr>
                 <td class="first"><a href="#">55C244</a></td>
@@ -242,7 +259,7 @@
                 <td>Bobby Looey</td>
                 <td>No</td>
                 <td>No</td>
-                <td class="last"><a href="#">Make Claim Archive</a></td>
+                <td class="last"><a href="#">Make Claim</a> <a href="#">Archive</a></td>
               </tr>
               <tr class="last">
                 <td class="first"><a href="#">55C244</a></td>
@@ -254,7 +271,7 @@
                 <td>Bobby Looey</td>
                 <td>No</td>
                 <td>No</td>
-                <td class="last"><a href="#">Make Claim Archive</a></td>
+                <td class="last"><a href="#">Make Claim</a> <a href="#">Archive</a></td>
               </tr>
             </tbody>
           </table>
@@ -262,6 +279,979 @@
         </div>
       </div><!-- end row -->
 
+      <!-- GL Form -->
+      <div class="row">
+
+        <div class="form-title col-sm-7">
+          <h1>General Liability</h1>
+          <h2>*Indicates Required Field. However Please attempt to complete all fields avalaible for optimal performance.</h2>
+        </div>
+        <div class="form-title col-sm-5">
+          <div class="form-group">
+            <label class="col-sm-4 control-label large-label">Select Client</label>
+            <div class="col-sm-8">
+              <select class="selectpicker">
+                <option value="12356">Customer A</option>
+                <option value="12357">Customer B</option>
+                <option value="12358">Customer C</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="clearfix"></div>
+        <form class="form-horizontal">
+
+          <!-- Smaller Form Title -->
+          <div class="col-sm-12 form-title-small">
+            <h3>Preliminary Information</h3>
+          </div>
+
+          <!-- 1st Party -->
+          <!-- Form Left Column -->
+          <div class="col-sm-6">
+            <fieldset>
+              <div class="form-group">
+                <label for="" class="col-sm-6 control-label">Policy Year (or Effective Date) Associated</label>
+                <div class="col-sm-6">
+                  <input type="text" class="form-control" id="" placeholder="04.01.14 GL Comprehensive" />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="" class="col-sm-6 control-label">Policy Title</label>
+                <div class="col-sm-6">
+                  <input type="text" class="form-control" id="" placeholder="General Liability 2014-15" />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="" class="col-sm-6 control-label">Policy Number</label>
+                <div class="col-sm-6">
+                  <input type="text" class="form-control" id="" placeholder="GL24244-01" />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="" class="col-sm-6 control-label">Deductible</label>
+                <div class="col-sm-6">
+                  <input type="text" class="form-control" id="" placeholder="N/A" />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="" class="col-sm-6 control-label">Carrier Name (if known)</label>
+                <div class="col-sm-6">
+                  <input type="text" class="form-control" id="" placeholder="Zurich NAs" />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="" class="col-sm-6 control-label">Actual Date &amp; Time of Incident or Claim</label>
+                <div class="col-sm-6">
+                  <div class='input-group date datepicker' id=''>
+                    <input type='text' class="form-control" />
+                    <span class="input-group-addon">
+                      <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="" class="col-sm-6 control-label">Carrier Name (if known)</label>
+                <div class="col-sm-6">
+                  <input type="text" class="form-control" id="" placeholder="">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="" class="col-sm-6 control-label">Case Number - (year) (number)</label>
+                <div class="col-sm-3">
+                  <input type="text" class="form-control" id="" placeholder="2016" />
+                </div>
+                <div class="col-sm-3">
+                  <input type="text" class="form-control" id="" placeholder="123456" />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="" class="col-sm-6 control-label">Carrier Case Number (if any)</label>
+                <div class="col-sm-6">
+                  <input type="text" class="form-control" id="" placeholder="N/A" />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="" class="col-sm-6 control-label">Major Class Description <span>*</span></label>
+                <div class="col-sm-6">
+                  <select class="selectpicker">
+                    <option value="">Select</option>
+                    <option value=""></option>
+                    <option value=""></option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="" class="col-sm-6 control-label">Secondary Class Description <span>*</span></label>
+                <div class="col-sm-6">
+                  <select class="selectpicker">
+                    <option value="">Select</option>
+                    <option value=""></option>
+                    <option value=""></option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="" class="col-sm-6 control-label">Date Injured Party Reported to Our Location <span>*</span></label>
+                <div class="col-sm-6">
+                  <div class='input-group date datepicker' id=''>
+                    <input type='text' class="form-control" />
+                    <span class="input-group-addon">
+                      <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="" class="col-sm-6 control-label">Date Our Company Is Reporting This Incident/Loss <span>*</span></label>
+                <div class="col-sm-6">
+                  <div class='input-group date datepicker' id=''>
+                    <input type='text' class="form-control" />
+                    <span class="input-group-addon">
+                      <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="" class="col-sm-6 control-label">
+                  Division/Location Incident Applied To <span>*</span>
+                  <span class="note">(Note: If the accident happened offsite then pick location assigned to and fill in the accident address below)</span>
+                </label>
+                <div class="col-sm-6">
+                  <select class="selectpicker">
+                    <option value="">Select</option>
+                    <option value=""></option>
+                    <option value=""></option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="" class="col-sm-6 control-label">Did Incident/Accident Happen Offsite?</label>
+                <div class="col-sm-6">
+                  <div class="radio-inline">
+                    <label>
+                      <input type="radio" name="offsite" id="" value="" checked />
+                      Yes
+                    </label>
+                  </div>
+                  <div class="radio-inline">
+                    <label>
+                      <input type="radio" name="offsite" id="" value="" />
+                      No
+                    </label>
+                  </div>
+                  <div class="radio-inline">
+                    <label>
+                      <input type="radio" name="offsite" id="" value="" />
+                      N/A
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+
+          <!-- 1st Part
+          <!-- 2nd Column -->
+          <div class="col-sm-6">
+            <fieldset>
+
+              <div class="form-group">
+                <label for="" class="col-sm-6 control-label">Location Number</label>
+                <div class="col-sm-6">
+                  <input type="text" class="form-control" id="" placeholder="" />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="" class="col-sm-6 control-label">Location Code</label>
+                <div class="col-sm-6">
+                  <input type="text" class="form-control" id="" placeholder="" />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="" class="col-sm-6 control-label">Division/Building Name and/or Number Assigned To/Occured At (if known)</label>
+                <div class="col-sm-6">
+                  <select class="selectpicker">
+                    <option value="">Select</option>
+                    <option value=""></option>
+                    <option value=""></option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="" class="col-sm-6 control-label">Department (if known)</label>
+                <div class="col-sm-6">
+                  <input type="text" class="form-control" id="" placeholder="" />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="" class="col-sm-6 control-label">Location Assigned To Address</label>
+                <div class="col-sm-6">
+                  <input type="text" class="form-control" id="" placeholder="" />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="" class="col-sm-6 control-label">&nbsp;</label>
+                <div class="col-sm-3">
+                  <input type="text" class="form-control" id="" placeholder="City" />
+                </div>
+                <div class="col-sm-3">
+                  <select class="selectpicker">
+                    <option value="">State</option>
+                    <option value=""></option>
+                    <option value=""></option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="" class="col-sm-6 control-label">&nbsp;</label>
+                <div class="col-sm-3">
+                  <input type="text" class="form-control" id="" placeholder="Zip" />
+                </div>
+                <div class="col-sm-3">
+                  <input type="text" class="form-control" id="" placeholder="Country" />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="" class="col-sm-6 control-label">List Specific Area of the Location Where Incident Occured?</label>
+                <div class="col-sm-6">
+                  <select class="selectpicker">
+                    <option value="">Select</option>
+                    <option value=""></option>
+                    <option value=""></option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="" class="col-sm-6 control-label">Insured Status of Incident Location</label>
+                <div class="col-sm-6">
+                  <select class="selectpicker">
+                    <option value="">Select</option>
+                    <option value=""></option>
+                    <option value=""></option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="" class="col-sm-6 control-label">If Not The Owner Of Location/Premises List Owner Information</label>
+                <div class="col-sm-6">
+                  <input type="text" class="form-control" id="" placeholder="" />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="" class="col-sm-6 control-label">Owner Contact Name</label>
+                <div class="col-sm-6">
+                  <input type="text" class="form-control" id="" placeholder="" />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="" class="col-sm-6 control-label">Owner Phone Number</label>
+                <div class="col-sm-6">
+                  <input type="text" class="form-control" id="" placeholder="" />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="" class="col-sm-6 control-label">Location Manager/Administrative Contact Name</label>
+                <div class="col-sm-6">
+                  <input type="text" class="form-control" id="" placeholder="" />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="" class="col-sm-6 control-label">Location Manager/Administrative Contact Phone Number Hours Our Driver Was On Work Duty</label>
+                <div class="col-sm-6">
+                  <input type="text" class="form-control" id="" placeholder="" />
+                </div>
+              </div>
+            </fieldset>
+          </div>
+
+          <!-- 2nd Part -->
+
+          <!-- Smaller Form Title -->
+          <div class="col-sm-12 form-title-small">
+            <h3 class="bordered">List 3rd Party Claimant Name(s) (if known)</h3>
+            <h4>* Indicates required field. However please attempt to fill in all the fields available for optimal performance.</h4>
+          </div>
+          <div class="clearfix"></div>
+
+          <!-- 1st Column -->
+          <div class="col-sm-6">
+            <fieldset>
+
+              <div class="form-group">
+                <label for="" class="col-sm-6 control-label">First Name and MI</label>
+                <div class="col-sm-6">
+                  <input type="text" class="form-control" id="" placeholder="" />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="" class="col-sm-6 control-label">3rd Party Last Name or Company Name <span>*</span></label>
+                <div class="col-sm-6">
+                  <input type="text" class="form-control" id="" placeholder="" />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="" class="col-sm-6 control-label">Sex (M/F)</label>
+                <div class="col-sm-6">
+                  <select class="selectpicker">
+                    <option value="">Select</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="" class="col-sm-6 control-label">Date of Birth</label>
+                <div class="col-sm-6">
+                  <input type="text" class="form-control" id="" placeholder="" />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="" class="col-sm-6 control-label">Medicare Benificiary? (Click for Definition)</label>
+                <div class="col-sm-6">
+                  <div class="radio-inline">
+                    <label>
+                      <input type="radio" name="medicare" id="" value="" checked />
+                      Yes
+                    </label>
+                  </div>
+                  <div class="radio-inline">
+                    <label>
+                      <input type="radio" name="medicare" id="" value="" />
+                      No
+                    </label>
+                  </div>
+                  <div class="radio-inline">
+                    <label>
+                      <input type="radio" name="medicare" id="" value="" />
+                      N/A
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="" class="col-sm-6 control-label">Contact Number</label>
+                <div class="col-sm-6">
+                  <input type="text" class="form-control" id="" placeholder="" />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="" class="col-sm-6 control-label">Minor or Represented?</label>
+                <div class="col-sm-6">
+                  <div class="radio-inline">
+                    <label>
+                      <input type="radio" name="minor" id="" value="" checked />
+                      Yes
+                    </label>
+                  </div>
+                  <div class="radio-inline">
+                    <label>
+                      <input type="radio" name="minor" id="" value="" />
+                      No
+                    </label>
+                  </div>
+                  <div class="radio-inline">
+                    <label>
+                      <input type="radio" name="minor" id="" value="" />
+                      N/A
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+
+          <!-- 2nd Part -->
+          <!-- 2nd Column -->
+          <div class="col-sm-6">
+            <fieldset>
+              <div class="form-group">
+                <label for="" class="col-sm-6 control-label">Race</label>
+                <div class="col-sm-6">
+                  <select class="selectpicker">
+                    <option value="">Select</option>
+                    <option value=""> </option>
+                    <option value=""> </option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="" class="col-sm-6 control-label">Hair Color</label>
+                <div class="col-sm-6">
+                  <input type="text" class="form-control" id="" placeholder="" />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="" class="col-sm-6 control-label">Location Assigned To Address</label>
+                <div class="col-sm-6">
+                  <input type="text" class="form-control" id="" placeholder="" />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="" class="col-sm-6 control-label">&nbsp;</label>
+                <div class="col-sm-3">
+                  <input type="text" class="form-control" id="" placeholder="City" />
+                </div>
+                <div class="col-sm-3">
+                  <select class="selectpicker">
+                    <option value="">State</option>
+                    <option value=""></option>
+                    <option value=""></option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="" class="col-sm-6 control-label">&nbsp;</label>
+                <div class="col-sm-3">
+                  <input type="text" class="form-control" id="" placeholder="Zip" />
+                </div>
+                <div class="col-sm-3">
+                  <input type="text" class="form-control" id="" placeholder="Country" />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="" class="col-sm-6 control-label">Occupation</label>
+                <div class="col-sm-6">
+                  <input type="text" class="form-control" id="" placeholder="" />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="" class="col-sm-6 control-label">Salary</label>
+                <div class="col-sm-6">
+                  <input type="text" class="form-control" id="" placeholder="" />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="" class="col-sm-6 control-label">&nbsp;</label>
+                <div class="col-sm-6">
+                  <button class="submit">Add 3rd Party Claimant</button>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+
+          <!-- 3rd Part -->
+          <!-- Smaller Form Title -->
+          <div class="col-sm-12 form-title-small">
+            <h3 class="bordered">Prelimanary Information</h3>
+            <h4>* Indicates required field. However please attempt to fill in all the fields available for optimal performance.</h4>
+          </div>
+          <div class="clearfix"></div>
+
+          <!-- 1st Column -->
+          <div class="col-sm-6">
+            <fieldset>
+
+              <div class="form-group">
+                <label for="" class="col-sm-6 control-label">Where Our Products and/or Services Involved? <span>*</span></label>
+                <div class="col-sm-6">
+                  <select class="selectpicker">
+                    <option value="">Select</option>
+                    <option value=""> </option>
+                    <option value=""> </option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="" class="col-sm-6 control-label">Business Unit or Department Involved? <span>*</span></label>
+                <div class="col-sm-6">
+                  <input type="text" class="form-control" id="" placeholder="" />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="" class="col-sm-6 control-label">Provide Incident or Claim Details on Injury and/or Product Damage? <span>*</span></label>
+                <div class="col-sm-6">
+                  <textarea></textarea>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="" class="col-sm-6 control-label">Accident Cause Code or Nature (if any)</label>
+                <div class="col-sm-6">
+                  <input type="text" class="form-control" id="" placeholder="" />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="" class="col-sm-6 control-label">Accident of Incident Cause? <span>*</span></label>
+                <div class="col-sm-6">
+                  <select class="selectpicker">
+                    <option value="">Select</option>
+                    <option value=""> </option>
+                    <option value=""> </option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="" class="col-sm-6 control-label">Nature of Injury Code - Injury Description(s) (if any)</label>
+                <div class="col-sm-6">
+                  <textarea></textarea>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="" class="col-sm-6 control-label">Primary Type of Injury or Illness? <span>*</span></label>
+                <div class="col-sm-6">
+                  <select class="selectpicker">
+                    <option value="">Select</option>
+                    <option value=""> </option>
+                    <option value=""> </option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="" class="col-sm-6 control-label">Body Part Code or Part(s) Injured</label>
+                <div class="col-sm-6">
+                  <input type="text" class="form-control" id="" placeholder="" />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="" class="col-sm-6 control-label">Primary Body Area of Injury or Illness</label>
+                <div class="col-sm-6">
+                  <input type="text" class="form-control" id="" placeholder="" />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="" class="col-sm-6 control-label">Was Injured Party(ies) Carrying Anyting?</label>
+                <div class="col-sm-6">
+                  <select class="selectpicker">
+                    <option value="">Select</option>
+                    <option value=""> </option>
+                    <option value=""> </option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="" class="col-sm-6 control-label">Was Injured Party(ies) Wearing Glasses?</label>
+                <div class="col-sm-6">
+                  <div class="radio-inline">
+                    <label>
+                      <input type="radio" name="glasses" id="" value="" checked />
+                      Yes
+                    </label>
+                  </div>
+                  <div class="radio-inline">
+                    <label>
+                      <input type="radio" name="glasses" id="" value="" />
+                      No
+                    </label>
+                  </div>
+                  <div class="radio-inline">
+                    <label>
+                      <input type="radio" name="glasses" id="" value="" />
+                      N/A
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="" class="col-sm-6 control-label">Was This A Fatality?</label>
+                <div class="col-sm-6">
+                  <div class="radio-inline">
+                    <label>
+                      <input type="radio" name="fatality" id="" value="" checked />
+                      Yes
+                    </label>
+                  </div>
+                  <div class="radio-inline">
+                    <label>
+                      <input type="radio" name="fatality" id="" value="" />
+                      No
+                    </label>
+                  </div>
+                  <div class="radio-inline">
+                    <label>
+                      <input type="radio" name="fatality" id="" value="" />
+                      N/A
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="" class="col-sm-6 control-label">Police or Fire Department Called?</label>
+                <div class="col-sm-6">
+                  <div class="radio-inline">
+                    <label>
+                      <input type="radio" name="police" id="" value="" checked />
+                      Yes
+                    </label>
+                  </div>
+                  <div class="radio-inline">
+                    <label>
+                      <input type="radio" name="police" id="" value="" />
+                      No
+                    </label>
+                  </div>
+                  <div class="radio-inline">
+                    <label>
+                      <input type="radio" name="police" id="" value="" />
+                      N/A
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="" class="col-sm-6 control-label">Ambulance/Paramedic Service Called to Scene?</label>
+                <div class="col-sm-6">
+                  <div class="radio-inline">
+                    <label>
+                      <input type="radio" name="ambulance" id="" value="" checked />
+                      Yes
+                    </label>
+                  </div>
+                  <div class="radio-inline">
+                    <label>
+                      <input type="radio" name="ambulance" id="" value="" />
+                      No
+                    </label>
+                  </div>
+                  <div class="radio-inline">
+                    <label>
+                      <input type="radio" name="ambulance" id="" value="" />
+                      N/A
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="" class="col-sm-6 control-label">Claimant Property Damaged During Incident (if any)</label>
+                <div class="col-sm-6">
+                  <input type="text" class="form-control" id="" placeholder="" />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="" class="col-sm-6 control-label">When/Where Can Damaged Property Be Viewed? (if any)</label>
+                <div class="col-sm-6">
+                  <input type="text" class="form-control" id="" placeholder="" />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="" class="col-sm-6 control-label">Describe the Lighting Conditions and/or Any Other Afflicting Object/Situation (i.e. size, color, etc.)</label>
+                <div class="col-sm-6">
+                  <input type="text" class="form-control" id="" placeholder="" />
+                </div>
+              </div>
+
+            </fieldset>
+          </div>
+
+          <!-- 3rd Part -->
+          <!-- 2nd Column -->
+          <div class="col-sm-6">
+            <fieldset>
+
+              <div class="form-group">
+                <label for="" class="col-sm-6 control-label">Was Merchandise/Fixtures Involved In This Incident List The Department Number, Sku, and Price</label>
+                <div class="col-sm-6">
+                  <div class="radio-inline">
+                    <label>
+                      <input type="radio" name="merch" id="" value="" checked />
+                      Yes
+                    </label>
+                  </div>
+                  <div class="radio-inline">
+                    <label>
+                      <input type="radio" name="merch" id="" value="" />
+                      No
+                    </label>
+                  </div>
+                  <div class="radio-inline">
+                    <label>
+                      <input type="radio" name="merch" id="" value="" />
+                      N/A
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="" class="col-sm-6 control-label">Any Foreign Objects, Defects To Product, Merchandise or Fixtures Found or Involved?</label>
+                <div class="col-sm-6">
+                  <div class="radio-inline">
+                    <label>
+                      <input type="radio" name="foreign" id="" value="" checked />
+                      Yes
+                    </label>
+                  </div>
+                  <div class="radio-inline">
+                    <label>
+                      <input type="radio" name="foreign" id="" value="" />
+                      No
+                    </label>
+                  </div>
+                  <div class="radio-inline">
+                    <label>
+                      <input type="radio" name="foreign" id="" value="" />
+                      N/A
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="" class="col-sm-6 control-label">Was It A Slip/Fall Accident?</label>
+                <div class="col-sm-6">
+                  <div class="radio-inline">
+                    <label>
+                      <input type="radio" name="slip" id="" value="" checked />
+                      Yes
+                    </label>
+                  </div>
+                  <div class="radio-inline">
+                    <label>
+                      <input type="radio" name="slip" id="" value="" />
+                      No
+                    </label>
+                  </div>
+                  <div class="radio-inline">
+                    <label>
+                      <input type="radio" name="slip" id="" value="" />
+                      N/A
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="" class="col-sm-6 control-label">Did Accident Occur Outside, Was A Special Event (e.g. sidewalk/parking log sale, etc.) In Progress?</label>
+                <div class="col-sm-6">
+                  <div class="radio-inline">
+                    <label>
+                      <input type="radio" name="outside" id="" value="" checked />
+                      Yes
+                    </label>
+                  </div>
+                  <div class="radio-inline">
+                    <label>
+                      <input type="radio" name="outside" id="" value="" />
+                      No
+                    </label>
+                  </div>
+                  <div class="radio-inline">
+                    <label>
+                      <input type="radio" name="outside" id="" value="" />
+                      N/A
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="" class="col-sm-6 control-label">Where Photos Taken of the Incident Scene?</label>
+                <div class="col-sm-6">
+                  <div class="radio-inline">
+                    <label>
+                      <input type="radio" name="photos" id="" value="" checked />
+                      Yes
+                    </label>
+                  </div>
+                  <div class="radio-inline">
+                    <label>
+                      <input type="radio" name="photos" id="" value="" />
+                      No
+                    </label>
+                  </div>
+                  <div class="radio-inline">
+                    <label>
+                      <input type="radio" name="photos" id="" value="" />
+                      N/A
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="" class="col-sm-6 control-label">Was Surveillance Camera In View and Video Saved?</label>
+                <div class="col-sm-6">
+                  <div class="radio-inline">
+                    <label>
+                      <input type="radio" name="surveillance" id="" value="" checked />
+                      Yes
+                    </label>
+                  </div>
+                  <div class="radio-inline">
+                    <label>
+                      <input type="radio" name="surveillance" id="" value="" />
+                      No
+                    </label>
+                  </div>
+                  <div class="radio-inline">
+                    <label>
+                      <input type="radio" name="surveillance" id="" value="" />
+                      N/A
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="" class="col-sm-6 control-label">Was the Inspection Conducted Immediately?</label>
+                <div class="col-sm-6">
+                  <div class="radio-inline">
+                    <label>
+                      <input type="radio" name="inspection" id="" value="" checked />
+                      Yes
+                    </label>
+                  </div>
+                  <div class="radio-inline">
+                    <label>
+                      <input type="radio" name="inspection" id="" value="" />
+                      No
+                    </label>
+                  </div>
+                  <div class="radio-inline">
+                    <label>
+                      <input type="radio" name="inspection" id="" value="" />
+                      N/A
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="" class="col-sm-6 control-label">Was the Location and/or Floor Found Clean and Free of Debris?</label>
+                <div class="col-sm-6">
+                  <div class="radio-inline">
+                    <label>
+                      <input type="radio" name="floor" id="" value="" checked />
+                      Yes
+                    </label>
+                  </div>
+                  <div class="radio-inline">
+                    <label>
+                      <input type="radio" name="floor" id="" value="" />
+                      No
+                    </label>
+                  </div>
+                  <div class="radio-inline">
+                    <label>
+                      <input type="radio" name="floor" id="" value="" />
+                      N/A
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="" class="col-sm-6 control-label">After Review, Was This Incident or Claim Preventable?</label>
+                <div class="col-sm-6">
+                  <div class="radio-inline">
+                    <label>
+                      <input type="radio" name="review" id="" value="" checked />
+                      Yes
+                    </label>
+                  </div>
+                  <div class="radio-inline">
+                    <label>
+                      <input type="radio" name="review" id="" value="" />
+                      No
+                    </label>
+                  </div>
+                  <div class="radio-inline">
+                    <label>
+                      <input type="radio" name="review" id="" value="" />
+                      N/A
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="" class="col-sm-6 control-label">Lawsuit Filed by Injured Party(ies)?</label>
+                <div class="col-sm-6">
+                  <div class="radio-inline">
+                    <label>
+                      <input type="radio" name="review" id="" value="" checked />
+                      Yes
+                    </label>
+                  </div>
+                  <div class="radio-inline">
+                    <label>
+                      <input type="radio" name="review" id="" value="" />
+                      No
+                    </label>
+                  </div>
+                  <div class="radio-inline">
+                    <label>
+                      <input type="radio" name="review" id="" value="" />
+                      N/A
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="" class="col-sm-6 control-label">Other Party(ies) Attorney Name(s)</label>
+                <div class="col-sm-6">
+                  <input type="text" class="form-control" id="" placeholder="" />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="" class="col-sm-6 control-label">Other Party(ies) Contact Number(s)</label>
+                <div class="col-sm-6">
+                  <input type="text" class="form-control" id="" placeholder="" />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="" class="col-sm-6 control-label">Our Attorney Name</label>
+                <div class="col-sm-6">
+                  <input type="text" class="form-control" id="" placeholder="" />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="" class="col-sm-6 control-label">Our Attorney Phone</label>
+                <div class="col-sm-6">
+                  <input type="text" class="form-control" id="" placeholder="" />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="" class="col-sm-6 control-label">Co-Deffendant(s)</label>
+                <div class="col-sm-6">
+                  <input type="text" class="form-control" id="" placeholder="" />
+                </div>
+              </div>
+
+            </fieldset>
+          </div>
+
+          <!-- 3rd Part -->
+          <!-- Smaller Form Title -->
+          <div class="col-sm-12 form-title-small">
+            <h3 class="bordered">Witnesses</h3>
+          </div>
+          <div class="clearfix"></div>
+
+          <div class="col-sm-12">
+            <table class="white-table">
+              <thead>
+                <th class="first">First Name, MI</th>
+                <th>Last Name</th>
+                <th>Contact Number</th>
+                <th>Witness Affiliation</th>
+              </thead>
+              <tbody>
+                <td class="first"></td>
+                <td></td>
+                <td></td>
+                <td>
+                  <div class="form-group">
+                    <select class="selectpicker">
+                      <option value="">Select</option>
+                      <option value=""> </option>
+                      <option value=""> </option>
+                    </select>
+                  </div>
+                </td>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="clearfix"></div>
+          <div class="col-sm-6"></div>
+          <div class="col-sm-6">
+            <div class="form-group">
+              <label for="" class="col-sm-6 control-label">&nbsp;</label>
+              <div class="col-sm-6">
+                <button class="submit">Save Form</button>
+              </div>
+            </div>
+          </div>
+
+        </form>
+      </div>
+
+
+      <!--
       <div class="row">
         <div class="col-sm-6">
           <h1>Titles</h1>
@@ -279,7 +1269,7 @@
         </div>
 
         <div class="col-sm-6">
-          <h1>Form Elements</h1>
+          <h1>Some General Form Elements</h1>
           <p>These are some Topiary elements</p>
           <div>
             <label>Label</label>
@@ -290,7 +1280,8 @@
             </select>
           </div>
         </div>
-      </div> <!-- end row -->
+      </div>
+      -->
 
       <footer class="mainfooter">
 
