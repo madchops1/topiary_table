@@ -381,4 +381,20 @@ body .row {
   margin-bottom: 24px;
 }
 
+.footer-logo {
+  margin: 0px auto;
+  width: 300px;
+  color: #000;
+  font-size: 12px;
+  position: relative;
+  display: block;
+}
+
+.footer-copy {
+  width: 500px;
+  margin: 0px auto;
+  text-align: center;
+  font-size: 12px;
+}
+
 /*# sourceMappingURL=layout.css.map */
