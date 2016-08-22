@@ -38,9 +38,23 @@ body {
   display: block;
 }
 
+
 .footer-copy {
   width: 500px;
   margin: 0px auto;
   text-align: center;
   font-size: 12px;
+}
+
+.spacer{
+  margin-top: 20px;
+  display: block;
+}
+
+.float-right {
+  float: right;
+}
+
+.float-left {
+  float: left;
 }

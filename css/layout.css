@@ -189,6 +189,15 @@ button.submit {
   text-transform: uppercase;
   border: 0px !important;
 }
+button.submit.center {
+  margin: 0px auto;
+  width: 150px;
+  display: block;
+}
+button.submit.right {
+  float: right;
+  margin-right: 15px;
+}
 
 .form-group textarea {
   border: 1px solid #c6c7c5;
@@ -197,6 +206,17 @@ button.submit {
 
 .bootstrap-select {
   width: 100% !important;
+}
+
+textarea {
+  border-radius: 0px;
+  height: 100px;
+  width: 100%;
+  padding: 6px;
+}
+
+table input {
+  margin: 0px;
 }
 
 header.mainnav .logo {
@@ -395,4 +415,17 @@ body .row {
   margin: 0px auto;
   text-align: center;
   font-size: 12px;
+}
+
+.spacer {
+  margin-top: 20px;
+  display: block;
+}
+
+.float-right {
+  float: right;
+}
+
+.float-left {
+  float: left;
 }

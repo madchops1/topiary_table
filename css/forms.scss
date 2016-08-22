@@ -56,6 +56,17 @@ button.submit {
   padding: 8px 12px;
   text-transform: uppercase;
   border: 0px !important;
+
+  &.center {
+    margin: 0px auto;
+    width: 150px;
+    display: block;
+  }
+
+  &.right {
+    float: right;
+    margin-right: 15px;
+  }
 }
 
 .form-group {
@@ -69,4 +80,19 @@ button.submit {
   //button {
     width: 100% !important;
   //}
+}
+
+textarea {
+  border-radius: 0px;
+  height: 100px;
+  width: 100% ;
+  padding: 6px;
+
+}
+
+table {
+
+  input {
+    margin: 0px;
+  }
 }
