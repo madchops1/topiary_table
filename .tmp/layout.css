@@ -143,6 +143,10 @@ body table.white-table td.first {
   text-transform: uppercase;
 }
 
+table.collapse.in {
+  display: table !important;
+}
+
 .form-title h1 {
   font-style: 18px;
 }
